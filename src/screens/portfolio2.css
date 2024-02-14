@@ -1,0 +1,100 @@
+.navUlLink {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s;
+
+}
+
+.navUlLink:hover {
+
+
+    color: #17d396;
+
+}
+
+.navUlLi {
+    text-align: center;
+    border-bottom: 1px solid rgb(251, 251, 251);
+    padding: 5px;
+}
+
+.navMenuDeActiveBtn {
+
+
+    display: block !important;
+    margin-left: auto !important;
+    background-color: transparent !important;
+    color: #17d396 !important;
+    font-weight: bold !important;
+    padding: 10px 35px !important;
+    border: none !important;
+    transition: 0.3s !important;
+
+}
+
+.navMenuDeActiveBtn:hover {
+
+    transform: scale(1.5);
+
+
+}
+
+.navMenuIcons {
+    display: flex;
+    padding: 10px;
+    border-radius: 50%;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    transition: 0.2s;
+
+}
+
+.navMenuIcons:hover {
+    color: #17d396;
+    border: 1px solid #17d396;
+
+}
+
+.headerIcons {
+    color: rgb(33, 37, 41);
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    transition: 0.5s;
+}
+
+.downloadBtn {
+    border: 2px solid #212529;
+    padding: 10px;
+    margin: 24px;
+    display: inline-block;
+    color: #212529;
+    text-decoration: none;
+}
+
+.headerIcons:hover {
+    color: #17d396;
+    background-color: #212529;
+}
+
+.professionalSkills {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding: 0 10px;
+    border-radius: 50%;
+    height: 235px;
+    width: 235px;
+    box-shadow: 0 0 12px;
+    transition: 0.2s;
+
+}
+
+.professionalSkills:hover {
+    background-color: #22252c;
+    transform: scale(1.2);
+}
