@@ -4,14 +4,9 @@ import { Button } from 'react-bootstrap'
 // import OffcanvasExample from '../components/Navbar'
 import img1 from '../images/myPic2.png'
 // import img2 from '../images/myPic2rotated.png'
-import img2 from '../images/myPIcRotated.png'
 import img3 from '../images/sirKamran.jpg'
-import work1 from '../images/myWork/hackathon.png'
-import work2 from '../images/myWork/akka2.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Image, Web } from '@mui/icons-material'
-import CodeIcon from '@mui/icons-material/Code';
-import TravelExploreRoundedIcon from '@mui/icons-material/TravelExploreRounded';
 import './portfolio2.css'
 import { Link } from 'react-router-dom'
 // import {  Navigate, useNavigate } from 'react-router-dom'
@@ -23,19 +18,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ClearIcon from '@mui/icons-material/Clear';
 import MailIcon from '@mui/icons-material/Mail';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import redux from '../images/redux.svg'
-import firebase from '../images/firebase.png'
-import mui from '../images/mui.png'
-import react from '../images/react.png'
-import js from '../images/js.png'
-import css3 from '../images/css3.png'
-import html5 from '../images/html5.png'
 import EmailIcon from '@mui/icons-material/Email';
-import bootstrap from '../images/bootstrap.png'
+
 import Navbar from '../components/Navbar'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import DownloadIcon from '@mui/icons-material/Download';
-import resume from '../file/resume.pdf'
+import HammadHasnainResume from '../file/HammadHasnainResume.pdf'
+import About from '../components/About'
+import Education from '../components/Education'
+import AcademicSkills from '../components/AcademicSkills'
+import ProfessionalSkills from '../components/ProfessionalSkills'
+import MyWork from '../components/MyWork'
 
 
 
@@ -44,52 +37,13 @@ import resume from '../file/resume.pdf'
 const Portfolio2 = () => {
 
     const [navMenuChecker, setNavMenuChecker] = useState(false)
-
-
-    const hackathonWeb = () => {
-        // window.location.replace('https://mr-h-hackathon.netlify.app/')
-        window.location.href = 'https://mr-h-hackathon.netlify.app/'
-        // window.open("https://mr-h-hackathon.netlify.app/")
-        // return <Navigate to="https://mr-h-hackathon.netlify.app/" />
-
-    }
-
-    // myWork()
-    const akkaWeb = () => {
-        window.location.href = "https://al-kamrankidzacademy.web.app/"
-        // return <Navigate to="https://al-kamrankidzacademy.web.app/" />
-
-    }
-
-
-    // myWork()
     const navMenuHandler = () => {
         navMenuChecker ? setNavMenuChecker(false) : setNavMenuChecker(true)
     }
 
-
-
-
-
-
-
-
-    const professionalSkills = [
-        { tag: 'HTML 5', img: html5, color: '#e34f27', width: '30px', border: '2px solid #e34f27' },
-        { tag: 'CSS 3', img: css3, color: '#337ce4', width: '25px', border: '2px solid #337ce4' },
-        { tag: 'Java Script', img: js, color: '#ffa500', width: '30px', border: '2px solid #ffa500' },
-        { tag: 'React JS', img: react, color: '#087ea3', width: '30px', border: '2px solid #087ea3' },
-        { tag: 'Bootstrap', img: bootstrap, color: '#8811fb', width: '35px', border: '2px solid #8811fb' },
-        { tag: 'Material UI', img: mui, color: '#007fff', width: '30px', border: '2px solid #007fff' },
-        { tag: 'Firebase', img: firebase, color: '#ffa500', width: '30px', border: '2px solid #ffa500' },
-        { tag: 'Redux', img: redux, color: '#764abc', width: '30px', border: '2px solid #764abc' },
-
-    ]
-
-
     const downloadHandler = async (e) => {
         // Assuming your PDF file is stored in your public folder
-        const pdfUrl = resume;
+        const pdfUrl = HammadHasnainResume;
         // const pdfUrl = '../file/resume.pdf';
         // const pdfUrl = '..\file\resume.pdf';
 
@@ -193,7 +147,7 @@ const Portfolio2 = () => {
                                 display: 'flex',
                                 justifyContent: { xs: 'none', sm: 'none', md: 'center' },
                                 alignItems: { xs: 'none', sm: 'none', md: 'center' },
-                                padding: '60px 10px',display:'flex',justifyContent:'center'
+                                padding: '60px 10px', display: 'flex', justifyContent: 'center'
 
 
 
@@ -223,7 +177,7 @@ const Portfolio2 = () => {
                                 </Stack>
                                 <Stack>
                                     <Box>
-                                        <a className='downloadBtn' href={resume}   >
+                                        <a className='downloadBtn' href={HammadHasnainResume}   >
                                             <span>Resume</span>
                                             <span><DownloadIcon /></span>
                                         </a>
@@ -254,7 +208,7 @@ const Portfolio2 = () => {
                                     display: {
                                         xs: 'none',
                                         sm: 'none',
-                                        md:'block'
+                                        md: 'block'
                                     }
 
                                 }}>
@@ -275,295 +229,30 @@ const Portfolio2 = () => {
 
 
             {/* ==================================== ABOUT ME ==================================== */}
-            <Grid container sx={{
-                height: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' }, width: '100%', backgroundColor: '#22252c',
-                display: 'flex', justifyContent: 'center',
-            }}>
-                <Grid item xs={12} sm={10} md={5} padding={'50px'}
-                    sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                    <Box sx={{ maxWidth: '400px', border: '7px solid #17D396' }}>
-                        <img src={img2} alt="" width={'100%'} style={{ position: 'relative', top: '35px', left: '-35px' }} />
-                    </Box>
-                </Grid>
-
-
-
-
-
-                <Grid item xs={12} sm={10} md={5}
-                    id='about'
-                    sx={{
-                        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    }} >
-                    <Box color={'whitesmoke'} p={2} >
-                        <Typography sx={{ padding: '20px 0', fontSize: '2.5em', color: '#17D396', fontWeight: '600', textAlign: 'center' }}>
-                            ABOUT ME</Typography>
-                        <Typography sx={{ fontSize: '1.2em', textAlign: 'justify' }}> I'm young energetic Web Developer, seeking employment in
-                            a reputable organization to employ my potential for the
-                            growth of organization and enhance my skills by working with
-                            a reputable organization. Player of
-
-                            <span style={{ color: '#17d396' }}> HTML5</span>,
-                            <span style={{ color: '#17d396' }}> CSS3</span>,
-                            <span style={{ color: '#17d396' }}> Java Script</span>,
-                            <span style={{ color: '#17d396' }}> React JS</span>,
-                            <span style={{ color: '#17d396' }}> Redux </span>,
-                            <span style={{ color: '#17d396' }}> Firebase</span>, &
-                            <span style={{ color: '#17d396' }}> GitHub</span>,
-                        </Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}> NAME:</span> <span>Hammad Hasnain</span> </Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}> DATE OF BIRTH:</span> <span>Jan 6<sup>th</sup>,2003</span></Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}>NATIONALITY:</span> <span>Pakistani</span> </Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}>ADDRESS:</span> <span>House # R-52 Nazar Ali Town Malir,Karachi</span> </Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}>PHONE:</span> <span>+923231203012</span></Typography>
-                        <Typography sx={{ padding: '8px', fontSize: '1.3em' }}>
-                            <span style={{ color: '#17D396', fontWeight: '600' }}> E-MAIL:</span> <span>hammadhasnain05@gmail.com</span></Typography>
-
-                    </Box>
-                </Grid>
-                <Grid item xs={10} sm={10} md={10} margin={'10em auto'}  >
-                    <Typography
-                        sx={{
-                            textAlign: 'center', fontSize: '3em', fontWeight: '600',
-                            color: '#17D396', marginBottom: 5
-                        }}>Interests</Typography>
-                    <Stack sx={{ flexDirection: 'row', justifyContent: 'center', gap: 2 }}>
-
-                        <Box sx={{}}>
-
-                            <Box sx={{
-                                backgroundColor: 'transparent',
-                                display: 'flex', justifyContent: 'center', alignItems: 'center',
-                                border: '1px solid #17D396',
-                                padding: '15px',
-                                borderRadius: '50%',
-                                color: '#17D396',
-                                fontWeight: 'bold',
-                                transition: '0.5s ',
-                                position: 'relative',
-                                "&:hover": {
-
-                                    backgroundColor: '#17D396',
-                                    color: '#000',
-                                    cursor: 'pointer',
-                                    "&::before": {
-                                        content: '"Coding"',
-                                        display: 'inline-block',
-                                        position: 'absolute',
-                                        top: '68px',
-                                        left: '5px',
-                                        color: '#17D396'
-
-                                    }
-
-                                },
-                                // "&::before": {
-                                //     content: '"Coding"',
-                                //     display: 'table',
-
-                                // }
-
-                            }}><CodeIcon sx={{ fontSize: '35px', hover: { color: 'red', fontSize: '50px' } }} /> </Box>
-                            {/* <Typography>Web Development</Typography> */}
-
-                        </Box>
-                        <Box
-                            sx={{
-                                backgroundColor: 'transparent',
-                                display: 'flex', justifyContent: 'center', alignItems: 'center',
-                                border: '1px solid #17D396',
-                                padding: '15px',
-                                borderRadius: '50%',
-                                color: '#17D396',
-                                fontWeight: 'bold',
-                                transition: '0.5s ',
-                                "&:hover": {
-
-                                    backgroundColor: '#17D396',
-                                    color: '#000',
-                                    cursor: 'pointer',
-                                    position: 'relative',
-                                    "&::before": {
-                                        content: '"Exploring "',
-                                        display: 'inline-block',
-                                        position: 'absolute',
-                                        top: '68px',
-                                        left: '5px',
-                                        color: '#17D396'
-
-                                    }
-
-                                }
-                            }}><TravelExploreRoundedIcon sx={{ fontSize: '35px' }} /></Box>
-
-                    </Stack>
-                </Grid>
-
-            </Grid>
+            <About />
 
 
             {/* ============================= EDUCATION ============================= */}
-            <Grid container
-                sx={{
-                    height: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
-                    width: '100%', backgroundColor: '#313741',
-                }}>
-                <Grid item xs={10} sm={10} md={10} margin={'10em auto'}  >
-                    <Typography
-                        sx={{
-                            textAlign: 'center', fontSize: '3em',
-                            fontWeight: '600', color: '#17D396', marginBottom: 5
-                        }}>Education</Typography>
-                    <Stack>
-                        <Box sx={{ padding: '20px' }}>
-
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '30px ' }}>
-                                <Box sx={{ width: 'fit-content', padding: '8px', border: '3px solid #17D396', borderRadius: '50%' }} >
-                                    <Box sx={{ height: '10px', width: '10px', backgroundColor: '#17D396', borderRadius: '50%' }}></Box>
-                                </Box>
-                                <Box>
-                                    <Typography sx={{ color: '#17D396', fontSize: '1.5em' }}>Undergraduate</Typography>
-                                    <Typography sx={{ color: 'whiteSmoke' }}>May 2021 - Now | Federal Urdu University | BSCS(Bachelor in Computer Science)</Typography>
-                                </Box>
-                            </Box>
-
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, padding: '30px ' }}>
-                                <Box sx={{ width: 'fit-content', padding: '8px', border: '3px solid #17D396', borderRadius: '50%' }} >
-                                    <Box sx={{ height: '10px', width: '10px', backgroundColor: '#17D396', borderRadius: '50%' }}></Box>
-                                </Box>
-                                <Box>
-                                    <Typography sx={{ color: '#17D396', fontSize: '1.5em' }}>Intermediate </Typography>
-                                    <Typography sx={{ color: 'whiteSmoke' }}> 2019 - 2021 |  Army Public School & College  </Typography>
-                                </Box>
-
-
-                            </Box>
-
-
-
-                        </Box>
-                    </Stack>
-
-                </Grid>
-            </Grid>
+            <Education />
 
 
             {/* ============================ ACADEMIC SKILLS ============================  */}
-            <Grid container sx={{ backgroundColor: '#17D396' }}>
-                <Grid item width={'100%'} >
-                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2, padding: '30px ' }}>
-                        <Box>
-                            <Typography sx={{ color: '#212529', fontSize: '2em', fontWeight: 'bold', fontFamily: 'monospace' }}>Mern Stack Web Developer </Typography>
-                            <Typography sx={{ color: 'whiteSmoke', textAlign: 'center' }}>May 2023 - Now | Jawan Pakistan </Typography>
-                        </Box>
-
-                    </Box>
-                </Grid>
-            </Grid>
-
-
-
-
-
+            <AcademicSkills />
 
 
             {/* ======================== PROFESSINAL SKILLS ======================== */}
-            <Grid container
-                sx={{
-                    height: { xs: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
-                    width: '100%', backgroundColor: '#22252c',
-                }}>
-                <Grid item xs={10} sm={10} md={10} m={'auto'}>
-                    <Box sx={{ margin: '10em auto ', }}>
-                        <Typography
-                            sx={{
-                                textAlign: 'center', fontSize: '3em',
-                                fontWeight: '600', color: '#17D396', marginBottom: 5
-                            }}>Professional Skills</Typography>
-                        <Stack>
-                            <Box>
-                                <Stack sx={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
-                                    {professionalSkills.map((e, i) =>
-                                        <li className='professionalSkills' key={i} style={{ color: e.color, border: e.border }}>
-                                            <span>{e.tag}</span>
-                                            <img src={e.img} alt="" width={e.width} />
-                                        </li>)}
-
-                                </Stack>
-                            </Box>
-                        </Stack>
-                    </Box>
-                    <Box sx={{}}>
-                        <Typography sx={{
-                            textAlign: 'center', fontSize: '3em',
-                            fontWeight: '600', color: '#17D396', marginBottom: 5
-                        }}>Some of My Work</Typography>
-                    </Box>
-
-                </Grid>
-
-            </Grid >
-
-
+            <ProfessionalSkills />
 
 
             {/* ======================== MY WORKS ======================== */}
-            < Grid container sx={{
-                height: {
-                    sx: 'auto',
-                    sm: 'auto',
-                    md: '80vh',
-                },
-                backgroundColor: '#000', alignItems: 'center', justifyContent: 'center', gap: 2,
-                p: 5
-
-            }}>
-
-                <Grid item xs={10} sm={8} md={8} lg={4} overflow={'hidden'}>
-                    <Box
-                        onClick={hackathonWeb}
-                        sx={{
-                            transition: '0.5s',
-                            "&:hover": {
-                                transform: 'Scale(1.5)',
-                                cursor: 'pointer',
-                            },
-                        }}
-                    >
-                        <img src={work1} alt="Hackathon" width={'100%'} />
-                    </Box>
-                </Grid>
-
-                <Grid item xs={10} sm={8} md={8} lg={4} overflow={'hidden'}>
-                    <Box
-                        onClick={akkaWeb}
-                        sx={{
-                            transition: '0.5s',
-                            "&:hover": {
-                                transform: 'Scale(1.5)',
-                                cursor: 'pointer',
-                            },
-                        }}>
-                        <img src={work2} alt="AKKA" width={'100%'} />
-                    </Box>
-                </Grid>
-            </Grid >
-
-
-
-
+            <MyWork />
 
 
             {/* ====================== CLIENT TESTIMONIALS ========================== */}
             < Grid container
                 sx={{
                     height: { xs: 'auto', sm: '80vh' }, backgroundColor: '#000',
-                    justifyContent: 'center', gap: 2,paddingTop:'3em'
+                    justifyContent: 'center', gap: 2, paddingTop: '3em'
                 }}>
                 <Grid item  >
                     <Box >
@@ -619,11 +308,11 @@ const Portfolio2 = () => {
                     height: {
                         xs: 'auto',
                         sm: '60vh',
-                        md:'60vh',
-                        lg:'70vh'
+                        md: '60vh',
+                        lg: '70vh'
                     }, width: '100%', backgroundColor: '#17d396'
                 }}>
-                <Grid item width={'100%'} sx={{ display: 'flex', flexDirection:'column', justifyContent: 'center' }}>
+                <Grid item width={'100%'} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <Box >
                         <Typography sx={{
                             textAlign: 'center', fontSize: '3em',
@@ -697,7 +386,7 @@ const Portfolio2 = () => {
 
             <footer id='hh'>
                 <Box sx={{ backgroundColor: '#000', p: 2, textAlign: 'center' }}>
-                    <Typography sx={{ color: '#17D396', fontSize: '12px' }}>Mr-H Portfolio © 2023. ALL RIGHTS RESERVED.</Typography>
+                    <Typography sx={{ color: '#17D396', fontSize: '12px' }}>HSquare Portfolio © 2023. ALL RIGHTS RESERVED.</Typography>
                 </Box>
             </footer>
         </div >
