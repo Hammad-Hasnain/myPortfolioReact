@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Typography, Stack } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import work1 from '../images/myWork/hackathon.png'
 import work2 from '../images/myWork/akka2.png'
 import work3 from '../images/myWork/stackgroup.PNG'

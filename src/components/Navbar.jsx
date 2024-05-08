@@ -13,7 +13,7 @@ const Navbar = ({ eventFire }) => {
       <Box >
         <Typography sx={{ color: '#000', fontWeight: '600', fontFamily: 'cursive', fontSize: '25px', marginLeft: '10px' }}>
           {/* Mr-H */}
-          <span > H S</span>QUARE
+          <span > HS</span>QUARE
         </Typography>
       </Box>
       <Box>

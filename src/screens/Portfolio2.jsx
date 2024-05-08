@@ -1,12 +1,12 @@
-import { Box, Stack, Typography, Button as MuiButton, Grid, TextField } from '@mui/material'
+import { Box, Stack, Typography, Button as MuiButton, Grid } from '@mui/material'
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 // import OffcanvasExample from '../components/Navbar'
 import img1 from '../images/myPic2.png'
 // import img2 from '../images/myPic2rotated.png'
 import img3 from '../images/sirKamran.jpg'
-import MenuIcon from '@mui/icons-material/Menu';
-import { Image, Web } from '@mui/icons-material'
+// import MenuIcon from '@mui/icons-material/Menu';
+// import { Image, Web } from '@mui/icons-material'
 import './portfolio2.css'
 import { Link } from 'react-router-dom'
 // import {  Navigate, useNavigate } from 'react-router-dom'
@@ -41,21 +41,21 @@ const Portfolio2 = () => {
         navMenuChecker ? setNavMenuChecker(false) : setNavMenuChecker(true)
     }
 
-    const downloadHandler = async (e) => {
-        // Assuming your PDF file is stored in your public folder
-        const pdfUrl = HammadHasnainResume;
-        // const pdfUrl = '../file/resume.pdf';
-        // const pdfUrl = '..\file\resume.pdf';
+    // const downloadHandler = async (e) => {
+    //     // Assuming your PDF file is stored in your public folder
+    //     const pdfUrl = HammadHasnainResume;
+    //     // const pdfUrl = '../file/resume.pdf';
+    //     // const pdfUrl = '..\file\resume.pdf';
 
-        // Using a hidden <a> element to trigger the download
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.setAttribute('download', 'filename.pdf');
-        document.body.appendChild(link);
-        // e.preventDefault()
-        link.click();
-        document.body.removeChild(link);
-    };
+    //     // Using a hidden <a> element to trigger the download
+    //     const link = document.createElement('a');
+    //     link.href = pdfUrl;
+    //     link.setAttribute('download', 'filename.pdf');
+    //     document.body.appendChild(link);
+    //     // e.preventDefault()
+    //     link.click();
+    //     document.body.removeChild(link);
+    // };
 
 
     return (
@@ -147,11 +147,9 @@ const Portfolio2 = () => {
                                 display: 'flex',
                                 justifyContent: { xs: 'none', sm: 'none', md: 'center' },
                                 alignItems: { xs: 'none', sm: 'none', md: 'center' },
-                                padding: '60px 10px', display: 'flex', justifyContent: 'center'
-
-
-
+                                padding: '60px 10px'
                             }}>
+
                             {/* ================= below nav =============== */}
                             <Box textAlign={'center'}>
                                 <Typography sx={{ fontSize: '2em' }}>
