@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Button as MuiButton, Grid } from '@mui/material'
+import { Box, Stack, Typography, Grid } from '@mui/material'
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 // import OffcanvasExample from '../components/Navbar'
@@ -371,7 +371,7 @@ const Portfolio2 = () => {
                     }}>
                         <FormatQuoteIcon sx={{ transform: 'rotate(180deg)', color: '#17D396', fontSize: '35px' }} />
                         <span style={{ padding: '20px 5px 0 5px', fontStyle: 'italic' }}>
-                            Delivering Satisfactory Project in Time
+                            Delivering a Satisfactory Project on Time
                         </span>
                         <FormatQuoteIcon sx={{ fontSize: '35px', color: '#17D396', }} />
 
