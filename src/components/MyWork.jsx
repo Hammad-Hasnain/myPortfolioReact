@@ -1,8 +1,5 @@
-import React from 'react'
 import { Box, Grid } from '@mui/material'
-import work1 from '../images/myWork/hackathon.png'
-import work2 from '../images/myWork/akka2.png'
-import work3 from '../images/myWork/stackgroup.PNG'
+import { works } from '../utils/content'
 
 const MyWork = () => {
 
@@ -32,49 +29,23 @@ const MyWork = () => {
                 p: 5
 
             }}>
-
-                <Grid item xs={11} sm={8} md={8} lg={4} overflow={'hidden'}>
-                    <Box
-                        onClick={() => window.location.href = 'https://hsquare-p-e-commerce.netlify.app/'}
-                        sx={{
-                            transition: '0.5s',
-                            "&:hover": {
-                                transform: 'Scale(1.5)',
-                                cursor: 'pointer',
-                            },
-                        }}
-                    >
-                        <img src={work1} alt="Hackathon" width={'100%'} />
-                    </Box>
-                </Grid>
-
-                <Grid item xs={11} sm={8} md={8} lg={4} overflow={'hidden'}>
-                    <Box
-                        onClick={() => window.location.href = "https://al-kamrankidzacademy.web.app/"}
-                        sx={{
-                            transition: '0.5s',
-                            "&:hover": {
-                                transform: 'Scale(1.5)',
-                                cursor: 'pointer',
-                            },
-                        }}>
-                        <img src={work2} alt="AKKA" width={'100%'} />
-                    </Box>
-                </Grid>
-
-                <Grid item xs={11} sm={8} md={8} lg={4} overflow={'hidden'}>
-                    <Box
-                        onClick={() => window.location.href = "https://hsquare-p-thestackgroup.netlify.app/"}
-                        sx={{
-                            transition: '0.5s',
-                            "&:hover": {
-                                transform: 'Scale(1.5)',
-                                cursor: 'pointer',
-                            },
-                        }}>
-                        <img src={work3} alt="The Stack Group" width={'100%'} />
-                    </Box>
-                </Grid>
+                {
+                    works.map((e, i) =>
+                        <Grid key={i} item xs={11} sm={8} md={8} lg={4} overflow={'hidden'}>
+                            <Box
+                                onClick={() => window.location.href = e.url}
+                                sx={{
+                                    transition: '0.5s',
+                                    "&:hover": {
+                                        transform: 'Scale(1.5)',
+                                        cursor: 'pointer',
+                                    },
+                                }}>
+                                <img src={e.source} alt={e.altered} width={'100%'} />
+                            </Box>
+                        </Grid>
+                    )
+                }
             </Grid >
         </>
     )

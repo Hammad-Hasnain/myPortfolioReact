@@ -186,8 +186,6 @@ const Portfolio2 = () => {
                                         </Button>
                                     </Box> */}
                                 </Stack>
-
-
                             </Box>
                         </Box>
                         <Box
@@ -196,11 +194,9 @@ const Portfolio2 = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center'
-
                             }}>
                             <Box
                                 sx={{
-
                                     maxWidth: '500px',
                                     minWidth: '300px',
                                     display: {
@@ -208,7 +204,6 @@ const Portfolio2 = () => {
                                         sm: 'none',
                                         md: 'block'
                                     }
-
                                 }}>
                                 <img src={img1} alt="" style={{
                                     width: '100%',
@@ -216,10 +211,8 @@ const Portfolio2 = () => {
 
                                 }} />
                             </Box>
-
                         </Box>
                     </Stack>
-
                 </Stack>
             </Stack>
             {/* ========================================== */}
